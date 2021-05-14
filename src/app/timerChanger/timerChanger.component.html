@@ -1,0 +1,3 @@
+<button class="btn" [style.background-color] = buttonColor><span class="delete">Timer {{buttonId + 1}}</span></button>
+<app-input class="color" (color)="newColor($event)"></app-input>
+<button class="close" (click)="onDeleteTimer()"></button>

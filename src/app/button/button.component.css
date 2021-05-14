@@ -1,0 +1,21 @@
+.btn{
+  margin: 15px;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background-color:#768d87;
+  border-radius:5px;
+  border:1px solid black;
+  outline: none;
+  box-shadow: 6px 9px #999;
+  color:#ffffff;
+  font-family: Arial, serif;
+  font-weight:bold;
+  text-decoration:none;
+  text-shadow:0 -1px 0 #2b665e;
+}
+
+.btn:active{
+  box-shadow: 3px 5px #666;
+  transform: translateY(4px);
+}
