@@ -8,10 +8,10 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@
 })
 export class TimerChangerComponent {
 
-  @Input() buttonColor = '';
-  @Input() buttonId = 0;
-  @Output() timerColor = new EventEmitter();
-  @Output() deleteTimer = new EventEmitter();
+  @Input() buttonColor: string = '';
+  @Input() buttonId: number = 0;
+  @Output() timerColor: EventEmitter<string>  = new EventEmitter();
+  @Output() deleteTimer: EventEmitter<string> = new EventEmitter();
 
   newColor(event: string): void{
     this.timerColor.emit(event);

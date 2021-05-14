@@ -9,10 +9,10 @@ import { switchMap } from 'rxjs/operators';
 })
 
 export class TimerComponent implements OnChanges, OnDestroy {
-  @Output() buttonColor = new EventEmitter();
+  @Output() buttonColor: EventEmitter<string> = new EventEmitter();
   timerStarted = false;
-  @Input() resetTimer = false;
-  @Input() bgColor = '';
+  @Input() resetTimer: boolean = false;
+  @Input() bgColor: string = '';
   timer$?: Subscription;
   isPaused = false;
   second = 0;

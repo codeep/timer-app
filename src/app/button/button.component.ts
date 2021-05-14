@@ -9,8 +9,8 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@
 })
 export class ButtonComponent {
 
-  @Input() value = '';
-  @Output() onClick = new EventEmitter();
+  @Input() value: string = '';
+  @Output() onClick: EventEmitter<object> = new EventEmitter();
 
   public onClickButton(event: Event): void {
     this.onClick.emit(event);

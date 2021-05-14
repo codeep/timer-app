@@ -7,7 +7,7 @@ import {Component, Output, EventEmitter, ChangeDetectionStrategy} from '@angular
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputComponent {
-  @Output() color = new EventEmitter();
+  @Output() color: EventEmitter<string> = new EventEmitter();
 
   onDetectChange(event: string): void{
       this.color.emit(event);
