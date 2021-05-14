@@ -1,0 +1,6 @@
+<div class="timer" [style.background-color]=bgColor>
+    <input class="timer-count" type="text" value = "{{ second * 1000 | date:'mm:ss'}}" readonly>
+    <button class = "btn start" (click) = "startTimer()">Start</button>
+    <button class = "btn pause" (click) = "pauseTimer()">Pause</button>
+    <button class = "btn reset" (click) = "resetTime()">Reset</button>
+</div>

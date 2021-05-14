@@ -1,0 +1,25 @@
+.wrapper{
+  display: flex;
+  margin: 20px;
+  width: 75%;
+  flex-wrap: wrap;
+}
+
+.nav{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 285px;
+  height: 600px;
+  margin-top: 0;
+  border: 5px solid black;
+  border-radius: 5px;
+  overflow: scroll;
+  background-color: #91b8b3;
+}
+
+.text{
+  display: block;
+  position: relative;
+  left: 80px;
+}
