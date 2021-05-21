@@ -1,5 +1,5 @@
 <div class="wrapper" [ngStyle] = "{'flex-direction':changeStyle === true ? 'column' : 'row'}">
-  <app-timer *ngFor = "let timer of timers; let i = index; trackBy:trackBy" [bgColor]="timer.color" [timerName]="timer.name" [resetTimer] = "resetAll" (buttonColor)="onGetButtonColor($event, i)"></app-timer>
+  <app-timer *ngFor = "let timer of timers; let i = index; trackBy:trackBy" [bgColor]="timer.color" [timerName]="timer.name" [timerComment]="timer.comment" [timerDescription]="timer.description" [resetTimer] = "resetAll" (buttonColor)="onGetButtonColor($event, i)"></app-timer>
 </div>
 
 <app-form *ngIf="isPopupOpen" (popupOpened)="onAddTimer()" (timerFormSubmit)="timerForm($event)"></app-form>
@@ -8,5 +8,5 @@
   <app-button [btnType]="'btn'" [value]="'Reset All'" (onClick)="onResetAll()"></app-button>
   <app-button [btnType]="'btn'" [value]="'Change Style'" (onClick)="onChangeStyle()"></app-button>
   <app-button [btnType]="'btn'" [value]="'Add'" (onClick)="onAddTimer()" style="display:block;"></app-button>
-  <app-timerchanger *ngFor = "let time of timers; let index = index; trackBy:trackBy" [buttonColor]="time.buttonColor" [buttonId] = "index" (timerColor)="newColor($event, index)" (deleteTimer)="onDeleteTimer(index)"></app-timerchanger>
+  <app-timerchanger *ngFor = "let time of timers; let index = index; trackBy:trackBy" [buttonColor]="time.buttonColor" [numberOfTimers]="timers.length" [buttonId] = "index" (timerColor)="newColor($event, index)" (deleteTimer)="onDeleteTimer(index)"></app-timerchanger>
 </div>

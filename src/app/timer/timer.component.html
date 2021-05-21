@@ -4,4 +4,6 @@
     <app-button (onClick)="startTimer()" [btnType] = "'start'" [value]="'start'"></app-button>
     <app-button (onClick)="pauseTimer()" [btnType]="'pause'" [value]="'pause'"></app-button>
     <app-button (onClick)="resetTime()" [btnType]="'reset'" [value]="'reset'"></app-button>
+    <p *ngIf="timerDescription" class="timer-info-item">{{timerDescription}}</p>
+    <p *ngIf="timerComment" class="timer-info-item">{{timerComment}}</p>
 </div>

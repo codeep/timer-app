@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -32,7 +32,7 @@ export class FormComponent {
 
   onSubmit(): void {
     this.popupOpened.emit();
-    this.timerFormSubmit.emit({name : this.timerName, description: this.timerDescription, comment: this.timerComment,
-      count: this.timerCount});
+    this.timerFormSubmit.emit({ name : this.timerName, description: this.timerDescription, comment: this.timerComment,
+      count: this.timerCount });
   }
 }

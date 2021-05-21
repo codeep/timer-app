@@ -14,6 +14,8 @@ export class TimerComponent implements OnChanges, OnDestroy {
   @Input() resetTimer?: boolean;
   @Input() bgColor?: string;
   @Input() timerName: string = '';
+  @Input() timerDescription?: string;
+  @Input() timerComment?: string;
   timer$?: Subscription;
   isPaused = false;
   second = 0;
@@ -47,6 +49,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
       this.buttonColor.emit('green');
     }
   }
+
   pauseTimer(): void{
     if (this.timerStarted){
       this.timerStarted = false;
@@ -57,6 +60,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
       }
     }
   }
+
   resetTime(): void{
     this.timerStarted = false;
     this.second = 0;

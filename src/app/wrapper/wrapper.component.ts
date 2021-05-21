@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-wrapper',
@@ -8,16 +8,16 @@ import {Component} from '@angular/core';
 
 export class WrapperComponent {
   timers = [
-    {id: 1, color: 'grey', status: 'start', time: 0, buttonColor: '', name: 'First Timer'},
-    {id: 2, color: 'purple', status: 'start', time: 0, buttonColor: '', name: 'Second Timer'},
-    {id: 3, color: 'turquoise', status: 'start', time: 0, buttonColor: '', name: 'Third Timer' }
+    { id: 1, color: 'grey', status: 'start', time: 0, buttonColor: '', name: 'First Timer', description: '', comment: '' },
+    { id: 2, color: 'purple', status: 'start', time: 0, buttonColor: '', name: 'Second Timer', description: '', comment: '' },
+    { id: 3, color: 'turquoise', status: 'start', time: 0, buttonColor: '', name: 'Third Timer', description: '', comment: '' }
   ];
   resetAll = false;
   changeStyle = false;
   isPopupOpen = false;
 
-  onDeleteTimer(index: number): void{
-    if (this.timers.length > 3){
+  onDeleteTimer(index: number): void {
+    if (this.timers.length > 3) {
       this.timers.splice(index, 1);
     }
   }
@@ -47,8 +47,17 @@ export class WrapperComponent {
   trackBy(index: number, timer: any): number {
     return timer.id;
   }
-  timerForm(event: any): void{
+  timerForm(event: any): void {
     const { name } = event;
-    this.timers.push({id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name });
+    const { description } = event;
+    const { comment } = event;
+    const { count } = event;
+    if (count > 1) {
+      for (let i = 0; i < count; ++i) {
+        this.timers.push({ id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment });
+      }
+    } else {
+      this.timers.push({ id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment });
+    }
   }
 }
