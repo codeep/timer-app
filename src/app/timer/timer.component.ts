@@ -5,14 +5,15 @@ import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
-  styleUrls: ['./timer.component.css']
+  styleUrls: ['./timer.component.css'],
 })
 
 export class TimerComponent implements OnChanges, OnDestroy {
   @Output() buttonColor: EventEmitter<string> = new EventEmitter();
   timerStarted = false;
-  @Input() resetTimer: boolean = false;
-  @Input() bgColor: string = '';
+  @Input() resetTimer?: boolean;
+  @Input() bgColor?: string;
+  @Input() timerName: string = '';
   timer$?: Subscription;
   isPaused = false;
   second = 0;

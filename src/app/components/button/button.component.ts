@@ -9,11 +9,12 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@
 })
 export class ButtonComponent {
 
-  @Input() value: string = '';
+  @Input() value?: string;
   @Output() onClick: EventEmitter<object> = new EventEmitter();
+  @Input() btnType?: string;
+  @Input() isDisabled?: boolean;
 
   public onClickButton(event: Event): void {
     this.onClick.emit(event);
   }
-
 }

@@ -1,0 +1,12 @@
+<div class="modal-form">
+  <div class="modal-form-body">
+    <modal [ngClass] = "{'hhidden': isHidden, 'sshow': !isHidden}" id="modal_1" class="hhidden">
+      <form [formGroup]="mainForm" novalidate (ngSubmit)="onSubmit()">
+        <app-timerform></app-timerform>
+        <app-button [value]="'Add Timer'" [btnType]="'submit'" [isDisabled]="mainForm.invalid"></app-button>
+        <app-button [btnType]="'closeForm'" (click)="closeDialog()" [value]="'Close'"></app-button>
+      </form>
+    </modal>
+  </div>
+</div>
+<div class="modal-form-background"></div>

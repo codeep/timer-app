@@ -5,7 +5,6 @@
   background-color:#768d87;
   border-radius:5px;
   border:1px solid black;
-  box-shadow: 6px 9px #999;
   color:#ffffff;
   outline: none;
   font-family: Arial, serif;
@@ -17,38 +16,6 @@
 .delete{
   position: relative;
   left: 3px;
-}
-
-.close {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  top: -11px;
-  left: -10px;
-  width: 10px;
-  height: 10px;
-  background: none;
-  border: none;
-}
-
-.close:hover {
-  opacity: 1;
-}
-
-.close:before, .close:after {
-  position: absolute;
-  content: ' ';
-  height: 15px;
-  width: 2px;
-  background-color: black;
-}
-
-.close:before {
-  transform: rotate(45deg);
-}
-
-.close:after {
-  transform: rotate(-45deg);
 }
 
 .color{

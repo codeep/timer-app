@@ -6,7 +6,7 @@
 }
 
 .nav{
-  position: absolute;
+  position: fixed;
   right: 5px;
   top: 5px;
   width: 285px;

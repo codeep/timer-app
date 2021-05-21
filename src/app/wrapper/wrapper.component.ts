@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-wrapper',
   templateUrl: './wrapper.component.html',
   styleUrls: ['./wrapper.component.css']
 })
+
 export class WrapperComponent {
   timers = [
-    {color: 'grey', status: 'start', time: 0, buttonColor: ''},
-    {color: 'purple', status: 'start', time: 0, buttonColor: ''},
-    {color: 'turquoise', status: 'start', time: 0, buttonColor: '' }
+    {id: 1, color: 'grey', status: 'start', time: 0, buttonColor: '', name: 'First Timer'},
+    {id: 2, color: 'purple', status: 'start', time: 0, buttonColor: '', name: 'Second Timer'},
+    {id: 3, color: 'turquoise', status: 'start', time: 0, buttonColor: '', name: 'Third Timer' }
   ];
   resetAll = false;
   changeStyle = false;
+  isPopupOpen = false;
 
   onDeleteTimer(index: number): void{
     if (this.timers.length > 3){
@@ -21,7 +23,7 @@ export class WrapperComponent {
   }
 
   onAddTimer(): void {
-    this.timers.push({color: 'grey', status: 'start', time: 0, buttonColor: '' });
+    this.isPopupOpen = !this.isPopupOpen;
   }
 
   onChangeStyle(): void {
@@ -42,4 +44,11 @@ export class WrapperComponent {
     this.timers[index].color = event;
   }
 
+  trackBy(index: number, timer: any): number {
+    return timer.id;
+  }
+  timerForm(event: any): void{
+    const { name } = event;
+    this.timers.push({id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name });
+  }
 }

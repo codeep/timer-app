@@ -1,0 +1,14 @@
+<div formGroupName="timerForm">
+  <div class="form-label-group">
+    <label>Timer Name</label>
+    <app-input-control [type]="'text'" [inputClass]="'input-control'" [inputStyle]="{'border-color':form.dirty && !form.valid  ? '#ff8264' : '', 'box-shadow':!form.valid && form.dirty ? '0 0 0 0.2rem rgba(255, 20, 0, 0.25)' : ''}" [autocomplete]="'off'" [formControlName]="'name'"></app-input-control>
+  </div>
+  <div class="form-label-group">
+    <label>Description</label>
+    <app-input-control [type]="'text'" [inputClass]="'input-control'" [autocomplete]="'off'" [formControlName]="'description'"></app-input-control>
+  </div>
+  <div class="form-label-group">
+    <label>Comment</label>
+    <app-input-control [type]="'text'" [inputClass]="'input-control'" [autocomplete]="'off'" [formControlName]="'comment'"></app-input-control>
+  </div>
+</div>
