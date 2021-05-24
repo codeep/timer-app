@@ -1,0 +1,5 @@
+<button
+  [disabled]="btnType == 'submit' ? isDisabled : false"
+  [type] = "btnType == 'submit' ? btnType : 'button'"
+  [ngClass] = "btnType || {}"
+  (click)="onClickButton($event)">{{value}}</button>

@@ -1,0 +1,6 @@
+<input
+  [ngClass]="type == 'text' ? 'timer-count' : 'input'"
+  [type]="type == 'form' ? 'text' : type"
+  ngModel
+  (ngModelChange)="onDetectChange($event)"
+  [ngModel]="value">

@@ -1,56 +1,29 @@
 .timer{
     width: 280px;
-    height: 60px;
+    height: 145px;
     margin-right: 10px;
     background-color: grey;
     margin-top: 8px;
     border-radius: 15px;
 }
 
-.timer-count{
-    width: 200px;
-    height: 20px;
-    margin-left: 40px;
-    margin-top: 5px;
-    text-align: center;
-    font-size: 18px;
-    outline: none;
-    border: none;
-    border-radius: 15px;
+.timerName{
+  position: absolute;
+  background-color: white;
+  width: 250px;
+  text-align: center;
+  margin: 5px 0 0 15px;
+  font-family: sans-serif;
+  border-radius: 15px;
 }
 
-.btn{
-  width: 70px;
-  height: 25px;
-  margin: 5px;
-  cursor: pointer;
-  box-shadow:inset 0 1px 3px 0 #91b8b3;
-  background-color:#768d87;
-  border-radius:5px;
-  border:1px solid black;
-  color:#ffffff;
-  font-family: Arial, serif;
-  outline: none;
-  font-weight:bold;
-  text-decoration:none;
-  text-shadow:0 -1px 0 #2b665e;
-  position: relative;
-  top: -1px;
-  left: 22px;
-}
-
-.btn:active{
-  transform: translateY(2px);
-}
-
-.start:hover{
-  background-color: green;
-}
-
-.pause:hover{
-  background-color: #d4e83c;
-}
-
-.reset:hover{
-  background-color: red;
+.timer-info-item {
+  background-color: white;
+  width: 250px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  margin: 5px 0 0 15px;
+  font-family: sans-serif;
+  border-radius: 15px;
 }

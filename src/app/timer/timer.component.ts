@@ -5,14 +5,17 @@ import { switchMap } from 'rxjs/operators';
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
-  styleUrls: ['./timer.component.css']
+  styleUrls: ['./timer.component.css'],
 })
 
 export class TimerComponent implements OnChanges, OnDestroy {
   @Output() buttonColor: EventEmitter<string> = new EventEmitter();
   timerStarted = false;
-  @Input() resetTimer: boolean = false;
-  @Input() bgColor: string = '';
+  @Input() resetTimer?: boolean;
+  @Input() bgColor?: string;
+  @Input() timerName?: string;
+  @Input() timerDescription?: string;
+  @Input() timerComment?: string;
   timer$?: Subscription;
   isPaused = false;
   second = 0;
@@ -46,6 +49,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
       this.buttonColor.emit('green');
     }
   }
+
   pauseTimer(): void{
     if (this.timerStarted){
       this.timerStarted = false;
@@ -56,6 +60,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
       }
     }
   }
+
   resetTime(): void{
     this.timerStarted = false;
     this.second = 0;
