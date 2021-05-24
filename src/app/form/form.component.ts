@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { TimerInfo } from '../interfaces/timer';
 
 @Component({
   selector: 'app-form',
@@ -11,7 +12,7 @@ import { FormGroup } from '@angular/forms';
 export class FormComponent {
 
   @Output() popupOpened: EventEmitter<object> = new EventEmitter();
-  @Output() timerFormSubmit: EventEmitter<object> = new EventEmitter();
+  @Output() timerFormSubmit: EventEmitter<TimerInfo> = new EventEmitter<TimerInfo>();
   mainForm = new FormGroup({});
 
   get timerName(): string {

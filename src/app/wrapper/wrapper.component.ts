@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TimerInfo} from '../interfaces/timer';
 
 @Component({
   selector: 'app-wrapper',
@@ -47,11 +48,8 @@ export class WrapperComponent {
   trackBy(index: number, timer: any): number {
     return timer.id;
   }
-  timerForm(event: any): void {
-    const { name } = event;
-    const { description } = event;
-    const { comment } = event;
-    const { count } = event;
+  timerForm(event: TimerInfo): void {
+    const { name, description, comment , count } = event;
     if (count > 0) {
       for (let i = 0; i < count; ++i) {
         this.timers.push({id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment});

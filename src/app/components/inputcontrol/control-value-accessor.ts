@@ -1,4 +1,4 @@
-import {AbstractControl, ControlContainer, ControlValueAccessor, FormControl, FormControlDirective} from '@angular/forms';
+import { AbstractControl, ControlContainer, ControlValueAccessor, FormControl, FormControlDirective } from '@angular/forms';
 import { Injectable, Injector, Input, ViewChild } from '@angular/core';
 
 @Injectable()
