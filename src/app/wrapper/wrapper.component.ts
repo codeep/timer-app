@@ -52,12 +52,10 @@ export class WrapperComponent {
     const { description } = event;
     const { comment } = event;
     const { count } = event;
-    if (count > 1) {
+    if (count > 0) {
       for (let i = 0; i < count; ++i) {
-        this.timers.push({ id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment });
+        this.timers.push({id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment});
       }
-    } else {
-      this.timers.push({ id: this.timers.length, color: 'grey', status: 'start', time: 0, buttonColor: '', name, description, comment });
     }
   }
 }

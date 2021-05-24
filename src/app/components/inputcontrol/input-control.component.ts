@@ -15,7 +15,7 @@ interface InputStyle {
   }]
 })
 export class InputControlComponent extends ControlValueAccessorConnector {
-  @Input() formControl: FormControl | undefined;
+  @Input() formControl?: FormControl;
   @Input() formControlName: string = '';
   @Input() type?: string;
   @Input() inputClass?: string;

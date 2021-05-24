@@ -13,7 +13,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
   timerStarted = false;
   @Input() resetTimer?: boolean;
   @Input() bgColor?: string;
-  @Input() timerName: string = '';
+  @Input() timerName?: string;
   @Input() timerDescription?: string;
   @Input() timerComment?: string;
   timer$?: Subscription;
